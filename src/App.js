@@ -1,17 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 import Navigation from './customer/components/Navigation/Navigation';
 import HomePage from './customer/pages/HomePage/HomePage';
 import Footer from './customer/components/Footer/Footer';
-
+import './App.css';
+import Product from './customer/components/Product/Product';
 function App() {
   return (
     <div className="App">
-      <Navigation/>
+      <Navigation />
       <div>
-        <HomePage/>
+        {/* <HomePage /> */}
+        <Product/>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
