@@ -16,7 +16,7 @@ const CartItem = () => {
         </div>
         <div className="ml-5 space-y-1 text-left">
           <p className="font-semibold">Men Slim Mid Rise Black Jeans</p>
-          <p className="opacity-70">Size: L,White</p>
+          <p className="opacity-70">Size: L, Black</p>
           <p className="opacity-70 mt-2">Seller: Crihtaliyo 2fashion</p>
 
           <div className="flex items-center space-x-5 text-gray-900 pt-6">

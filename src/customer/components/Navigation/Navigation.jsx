@@ -10,6 +10,7 @@ import {
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { deepPurple } from "@mui/material/colors";
 import { navigation } from "./NavigationData"; // Use an absolute import here
+import { useNavigate } from "react-router-dom";
 
 // The rest of your code remains the same
 
@@ -23,6 +24,7 @@ export default function Navigation() {
   const [anchorEl, setAnchorEl] = useState(null);
   const openUserMenu = Boolean(anchorEl);
   const jwt = localStorage.getItem("jwt");
+  const navigate = useNavigate()
 
   const handleUserClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -39,7 +41,7 @@ export default function Navigation() {
   };
 
   const handleCategoryClick = (category, section, item, close) => {
-    // navigate(`/${category.id}/${section.id}/${item.id}`);
+    navigate(`/${category.id}/${section.id}/${item.id}`);
     close();
   };
 
@@ -442,7 +444,7 @@ export default function Navigation() {
                           Profile
                         </MenuItem>
 
-                        <MenuItem>My Orders</MenuItem>
+                        <MenuItem onClick={()=>navigate("/account/order")}>My Orders</MenuItem>
 
                         <MenuItem>Logout</MenuItem>
                       </Menu>
